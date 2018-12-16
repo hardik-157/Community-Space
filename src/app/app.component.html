@@ -1,0 +1,133 @@
+<!-- Main navigation toolbar of the application -->
+
+<nav class="navbar navbar-expand-lg navbar-dark color_primary">
+  <a class="navbar-brand" routerLink="/home" routerLinkActive="active">Community Space</a>
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navb"
+          aria-expanded="true">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="navbar-collapse collapse show" id="navb">
+    <!-- links for different components of the app module -->
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="communities" routerLinkActive="active">Communities</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/about" routerLinkActive="active">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/contact" routerLinkActive="active">Contact</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+          {{ welcome }}
+        </a>
+        <div class="dropdown-menu">
+          <a *ngIf="!login; else logout" class="dropdown-item" routerLink="/login" routerLinkActive="active">Log-In</a>
+          <ng-template #logout>
+            <a class="dropdown-item customLink" (click)="logoff()">Log-out</a>
+            <a class="dropdown-item" routerLink="/profile" routerLinkActive="active">Profile</a>
+          </ng-template>
+          <a *ngIf="!login" class="dropdown-item" routerLink="/signup" routerLinkActive="active">Sign-Up</a>
+        </div>
+      </li>
+    </ul>
+    <!-- Form for the search bar of the application -->
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search">
+      <button routerLinkActive="active" routerLink="search" mat-button class="color_accent">
+        <mat-icon>search</mat-icon>
+      </button>
+    </form>
+  </div>
+</nav>
+<!--mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span routerLink="home" routerLinkActive="active" class="customLink title">CommunitySpace</span>
+    <span><button mat-button routerLinkActive="active" routerLink="communities">Communities</button></span>
+    <span><button mat-button routerLinkActive="active" routerLink="about">About</button></span>
+    <span><button mat-button routerLinkActive="active" routerLink="contact">Contact</button></span>
+    <span><button mat-button [matMenuTriggerFor]="account">Account</button>
+    <mat-menu #account="matMenu">
+      <button mat-menu-item routerLink="login" routerLinkActive="active">Log-In</button>
+      <button mat-menu-item routerLink="signup" routerLinkActive="active">sign-Up</button>
+    </mat-menu>
+  </span>
+  </mat-toolbar-row>
+</mat-toolbar>
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span routerLink="home" routerLinkActive="active" class="customLink title">CommunitySpace</span>
+    <span><button mat-button routerLinkActive="active" routerLink="communities">Communities</button></span>
+    <span><button mat-button routerLinkActive="active" routerLink="about">About</button></span>
+    <span><button mat-button routerLinkActive="active" routerLink="contact">Contact</button></span>
+    <span><button mat-button [matMenuTriggerFor]="account">Account</button>
+    <mat-menu #account="matMenu">
+      <button mat-menu-item routerLink="login" routerLinkActive="active">Log-In</button>
+      <button mat-menu-item routerLink="signup" routerLinkActive="active">sign-Up</button>
+    </mat-menu>
+  </span>
+  </mat-toolbar-row>
+</mat-toolbar-->
+<router-outlet></router-outlet>
+<!-- Footer of the app module -->
+
+<footer class="page-footer font-small color_primary pt-4">
+  <div class="container-fluid text-center text-md-left">
+    <!-- Using bootstrap4 grid system for row and columns -->
+    <div class="row">
+      <div class="col-md-6 mt-md-0 mt-3">
+        <!-- Container for the logo image -->
+        <div class="container">
+          <img class="img-fluid" src="assets/logo.png">
+        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua.
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          Excepteur sint occaecat cupidatat non proident.</p>
+      </div>
+      <hr class="clearfix w-100 d-md-none pb-3">
+      <div class="col-md-3 mb-md-0 mb-3">
+        <h5 class="text-uppercase">Links</h5>
+        <mat-list role="list">
+          <mat-divider></mat-divider>
+          <mat-list-item role="listitem">
+            <button mat-button>Link 1</button>
+          </mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item role="listitem">
+            <button mat-button>Link 1</button>
+          </mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item role="listitem">
+            <button mat-button>Link 1</button>
+          </mat-list-item>
+          <mat-divider></mat-divider>
+        </mat-list>
+      </div>
+      <div class="col-md-3 mb-md-0 mb-3">
+        <h5 class="text-uppercase">Links</h5>
+        <mat-list role="list">
+          <mat-divider></mat-divider>
+          <mat-list-item role="listitem">
+            <button mat-button>Link 1</button>
+          </mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item role="listitem">
+            <button mat-button>Link 1</button>
+          </mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item role="listitem">
+            <button mat-button>Link 1</button>
+          </mat-list-item>
+          <mat-divider></mat-divider>
+        </mat-list>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright text-center py-3">© 2018 Copyright Community Space
+  </div>
+</footer>
+

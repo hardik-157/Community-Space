@@ -1,0 +1,71 @@
+<div class="color_background">
+  <br/>
+  <div class="qusetion-head">
+    <div class="row">
+      <div class="col-lg-10 col-md-10 col-sm-12">
+        <h3>{{question.question}}</h3>
+        <p>T{{question.description}}</p>
+        <mat-chip-list>
+          <mat-chip *ngFor="let t of question.topic_ids">{{t}}</mat-chip>
+        </mat-chip-list>
+      </div>
+      <div class="col-lg-2 col-md-2 col sm-12 right_border">
+        <p>{{question.date | date}}</p>
+        <button mat-button>
+          <mat-icon>thumb_up</mat-icon>
+        </button>
+        <button mat-button>
+          <mat-icon>thumb_down</mat-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="answer-container">
+    <mat-accordion>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Answer 1
+          </mat-panel-title>
+          <mat-panel-description>
+            Auther | Votes | comments
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <p>This is answer details. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+          laboris nisi ut aliquip ex ea commodo consequat.
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        <mat-divider style="background-color: lightgray"></mat-divider>
+        <br/>
+        <h4>Comments</h4>
+        <mat-accordion>
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Comment 1
+              </mat-panel-title>
+              <mat-panel-description>
+                Aither | Votes
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+            This is the content of the comment one fomr the auther xyz.
+          </mat-expansion-panel>
+        </mat-accordion>
+        <mat-divider style="background-color: lightgray"></mat-divider>
+        <p>Date and other info about the answer</p>
+        <button mat-button>
+          <mat-icon>thumb_up</mat-icon>
+        </button>
+        <button mat-button>
+          <mat-icon>thumb_down</mat-icon>
+        </button>
+        <br/>
+        <mat-form-field color="accent">
+          <textarea matInput placeholder="Write a comment"></textarea>
+        </mat-form-field>
+        <button mat-button>
+          <mat-icon>send</mat-icon>
+        </button>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+</div>

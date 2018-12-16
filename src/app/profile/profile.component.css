@@ -1,0 +1,13 @@
+.example-card {
+  margin: auto;
+  max-width: 600px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.example-header-image {
+  background-image: url('../../assets/profile.jpg');
+  background-size: cover;
+}

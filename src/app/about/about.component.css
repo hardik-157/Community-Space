@@ -1,0 +1,12 @@
+.about-head {
+  padding: 20px;
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  background-color: #6a1b9a;
+  border-radius: 0.3rem;
+}
+
+.center {
+  margin: auto;
+}

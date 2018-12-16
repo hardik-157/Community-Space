@@ -1,0 +1,10 @@
+.myWarn{
+  color: #f00;
+}
+
+.customLink{
+  cursor: pointer;
+}
+.customLink:hover{
+  color: darkgray;
+}

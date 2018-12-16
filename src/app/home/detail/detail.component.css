@@ -1,0 +1,22 @@
+.qusetion-head {
+  padding: 10px;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  background-color: #6a1b9a;
+  border-radius: 0.3rem 0.3rem 0 0;
+}
+
+.answer-container {
+  padding: 10px;
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  background-color: rgba(0, 0, 0, 0.99);
+}
+
+.right_border {
+  border: 0 solid #00c853;
+  border-left-width: 3px;
+  padding-left: 10px;
+}
+
